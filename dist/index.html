@@ -2,8 +2,11 @@
 <html>
 <head>
 	<title>Åsnes</title>
-	<!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet"> -->
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/mainscript.js" defer></script>-->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans:700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 </head>
 <body class="page">
@@ -11,8 +14,8 @@
 		<div class="header">
 			<img class="header__logo header__logo--main" src="media/icons/logo.svg">
 			<div class="header--left">
-				<img class="header__logo header__logo--small" src="media/icons/eng.svg">
-				<img class="header__logo header__logo--small" src="media/icons/søk.svg">
+				<img class="header__logo header__logo--small header__logo--xshidden" src="media/icons/eng.svg">
+				<img class="header__logo header__logo--small header__logo--xshidden" src="media/icons/søk.svg">
 				<img class="header__logo header__logo--small" src="media/icons/meny.svg">
 			</div>
 		</div>
@@ -26,24 +29,24 @@
 			</div>
 		</div>
 		<div class="ski">
-			<div class="col-9 ski__icon__wrap">
-				<li class="col-1">
+			<div class="col-9 col-md-12 ski__icon__wrap">
+				<li class="col-1 col-md-2 col-xs-4">
 					<h2 class="ski__title">fjellski</h2>
 					<img class="ski__icon" src="media/icons/ikon-fjellski.svg">
 				</li>
-				<li class="col-1">
+				<li class="col-1 col-md-2 col-xs-4">
 					<h2 class="ski__title">toppturski</h2>
 					<img class="ski__icon" src="media/icons/ikon-toppturski.svg">
 				</li>
-				<li class="col-1">
+				<li class="col-1 col-md-2 col-xs-4">
 					<h2 class="ski__title">turski</h2>
 					<img class="ski__icon" src="media/icons/ikon-turski.svg">
 				</li>
-				<li class="col-1">
+				<li class="col-1 col-md-2 col-xs-4">
 					<h2 class="ski__title">skistaver</h2>
 					<img class="ski__icon" src="media/icons/ikon-skistaver.svg">
 				</li>
-				<li class="col-1">
+				<li class="col-1 col-md-2 col-xs-4">
 					<h2 class="ski__title">skifeller</h2>
 					<img class="ski__icon" src="media/icons/ikon-skifeller.svg">
 				</li>
@@ -51,7 +54,7 @@
 		</div>
 		<div class="col-12 news">
 			<div class="col-12 news__ill">
-				<div class="col-5 news__content">
+				<div class="col-5 col-md-7 col-xs-12 news__content">
 					<img class="news__icon" src="media/icons/ikon-nyhet.svg">
 					<img class="news__icon" src="media/icons/ikon-uten-stålkant.svg">
 					<h2 class="news__content--first">Breidablikk jaktski m/ fellelås</h2>
@@ -65,7 +68,7 @@
 		<div class="col-12 product">
 			<h2 class="product__title">PRODUKTER</h2>
 			<ul class="image__grid">
-				<li class="col-3 product--new">
+				<li class="product--new">
 					<img class="image__grid__img" src="media/img/sondre.jpg">
 					<h3 class="image__grid__desc">Sondre AW16</h3>
 				</li>
@@ -73,7 +76,7 @@
 					<img class="image__grid__img" src="media/img/mountainrace.jpg">
 					<h3 class="image__grid__desc">Mountain Race 48</h3>
 				</li>
-				<li class="col-3 product--new">
+				<li class="product--new">
 					<img class="image__grid__img" src="media/img/breidablikk.jpg">
 					<h3 class="image__grid__desc">Breidablikk 2016</h3>
 				</li>
@@ -86,7 +89,7 @@
 		<div class="col-12 article">
 			<h3>ULTRA-MARATON PÅ FJELLSKI</h3>
 			<h2 class="article__title">Hardinglaup 2016</h2>
-			<p class="col-4 article__text">Er du robust nok til å takle høyfjellet på vinterstid? Har du erfaring fra lange turer på fjellski? Da er kanskje dette noe for deg.</p>
+			<p class="col-4 col-xs-10 article__text">Er du robust nok til å takle høyfjellet på vinterstid? Har du erfaring fra lange turer på fjellski? Da er kanskje dette noe for deg.</p>
 			<button>LES MER</button>
 		</div>
 		<div class="col-12 footer">
@@ -154,8 +157,8 @@
 					</li>
 					<li>
 						<h3>FØLG OSS PÅ</h3>
-						<img class="footer__contact--icon" src="media/icons/facebook.svg"><p>FACEBOOK</p>
-						<img class="footer__contact--icon" src="media/icons/instagram.svg"><p>INSTAGRAM</p>
+						<span><img class="footer__contact--icon" src="media/icons/facebook.svg"><p>FACEBOOK</p></span>
+						<span><img class="footer__contact--icon" src="media/icons/instagram.svg"><p>INSTAGRAM</p></span>
 					</li>
 					<li></li>
 				</ul>

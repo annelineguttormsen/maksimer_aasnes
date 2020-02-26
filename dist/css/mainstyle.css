@@ -69,7 +69,8 @@ hr {
 }
 
 button {
-  font-family: "Josefin Sans", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
   background: white;
   color: #104a7e;
   border: none;
@@ -98,6 +99,7 @@ button {
 }
 .header__logo--small {
   margin-left: 15px;
+  display: inline-block;
 }
 .header--left {
   position: absolute;
@@ -107,7 +109,7 @@ button {
 
 .slideshow {
   height: 600px;
-  background: url("../media/img/AI_image.jpg") no-repeat center;
+  background: url("../media/img/AI_Image.jpg") no-repeat center;
   background-size: auto 100%;
   position: relative;
 }
@@ -142,7 +144,7 @@ button {
 
 .ski {
   background: #07253F;
-  padding: 20px 0px;
+  padding: 20px 50px;
   box-sizing: border-box;
 }
 .ski__icon__wrap {
@@ -165,7 +167,7 @@ button {
 
 .news__content {
   display: inline-block;
-  padding: 30px 0px 100px 50px;
+  padding: 30px 10px 100px 50px;
   background: #104a7e;
   position: relative;
   z-index: 2;
@@ -183,6 +185,7 @@ button {
 .news__content--text {
   font-weight: 700;
   margin-bottom: 30px;
+  font-size: 16px;
 }
 .news__icon {
   display: inline-block;
@@ -191,7 +194,7 @@ button {
 }
 .news__ill {
   display: inline-block;
-  background: url("../media/img/AZA1bD.jpg") no-repeat center center;
+  background: url("../media/img/AZA1bD.jpg") no-repeat center right;
   background-size: auto 100%;
   position: relative;
 }
@@ -238,6 +241,7 @@ button {
   font-size: 32px;
 }
 .article__text {
+  font-size: 16px;
   padding: 30px 0px;
 }
 .article button {
@@ -254,9 +258,15 @@ button {
 .footer__links .image__grid__desc {
   text-align: left;
 }
-.footer__contact--icon {
+.footer__contact span {
+  display: block;
+}
+.footer__contact span p, .footer__contact--icon {
   display: inline-block;
   width: 20px;
+}
+.footer__contact--icon {
+  margin-right: 10px;
 }
 .footer__contact .image__grid {
   margin: 30px 0px;
@@ -303,6 +313,9 @@ button {
   position: relative;
   z-index: 1;
 }
+.image__grid p {
+  font-size: 14px;
+}
 
 @media screen and (max-width: 1280px) {
   .col-12 {
@@ -347,6 +360,175 @@ button {
 
   .page__wrap {
     width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .col-md-12 {
+    width: 100%;
+  }
+
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  .col-md-7 {
+    width: 58.3%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-5 {
+    width: 41.5%;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+  }
+
+  .col-md-3 {
+    width: 24.99%;
+  }
+
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  .ski__icon__wrap {
+    flex-wrap: wrap;
+  }
+  .ski__icon {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .image__grid {
+    flex-wrap: wrap;
+  }
+  .image__grid li {
+    width: 44%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .col-xs-12 {
+    width: 100%;
+  }
+
+  .col-xs-10 {
+    width: 83.33%;
+  }
+
+  .col-xs-9 {
+    width: 75%;
+  }
+
+  .col-xs-8 {
+    width: 66.66%;
+  }
+
+  .col-xs-7 {
+    width: 58.3%;
+  }
+
+  .col-xs-6 {
+    width: 50%;
+  }
+
+  .col-xs-5 {
+    width: 41.5%;
+  }
+
+  .col-xs-4 {
+    width: 33.33%;
+  }
+
+  .col-xs-3 {
+    width: 24.99%;
+  }
+
+  .col-xs-2 {
+    width: 16.66%;
+  }
+
+  .header {
+    padding: 40px 20px;
+  }
+  .header__logo {
+    height: auto;
+    width: 50%;
+  }
+  .header__logo--small {
+    height: 25px;
+    width: auto;
+  }
+  .header__logo--xshidden {
+    display: none;
+  }
+  .header--left {
+    right: 20px;
+  }
+
+  .ski {
+    padding: 20px 20px;
+  }
+  .ski__icon__wrap {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .ski__icon {
+    padding: 10px 30px;
+  }
+
+  .slideshow {
+    height: 400px;
+  }
+  .slideshow__title, .slideshow__button {
+    margin: 20px;
+  }
+  .slideshow__pips {
+    right: 20px;
+    bottom: 30px;
+  }
+
+  .news__content {
+    padding: 30px 10px 100px 20px;
+  }
+  .news__ill {
+    padding-top: 200px;
+  }
+  .news__ill__img {
+    width: auto;
+    height: 100px;
+    top: 50px;
+    right: 15%;
+  }
+
+  .product, .article, .footer {
+    padding: 50px 20px;
+  }
+
+  .article {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header__logo {
+    height: 30px;
+    width: auto;
+  }
+  .header__logo--small {
+    height: 17px;
   }
 }
 

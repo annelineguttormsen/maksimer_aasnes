@@ -33,3 +33,156 @@
         width:100%;
     }
 }
+//TABLET
+@media screen and (max-width:992px) {
+    .col-md-12 {
+        width:100%;
+    }
+    .col-md-10 {
+        width:83.33%;
+    }
+    .col-md-9 {
+        width:75%;
+    }
+    .col-md-8 {
+        width:66.66%;
+    }
+    .col-md-7 {
+        width:58.3%;
+    }
+    .col-md-6 {
+        width:50%;
+    }
+    .col-md-5 {
+        width:41.5%;
+    }
+    .col-md-4 {
+        width:33.33%;
+    }
+    .col-md-3 {
+        width:24.99%;
+    }
+    .col-md-2 {
+        width:16.66%;
+    }
+    .ski {
+        &__icon__wrap {
+            flex-wrap:wrap;
+        }
+        &__icon {
+            box-sizing:border-box;
+            margin:0 auto;
+            padding:15px;
+        }
+    }
+    .image__grid {
+        flex-wrap:wrap;
+        li {
+            width:44%;
+            margin-bottom:20px;
+        }
+    }
+}
+//MOBILE
+@media screen and (max-width:576px) {
+    .col-xs-12 {
+        width:100%;
+    }
+    .col-xs-10 {
+        width:83.33%;
+    }
+    .col-xs-9 {
+        width:75%;
+    }
+    .col-xs-8 {
+        width:66.66%;
+    }
+    .col-xs-7 {
+        width:58.3%;
+    }
+    .col-xs-6 {
+        width:50%;
+    }
+    .col-xs-5 {
+        width:41.5%;
+    }
+    .col-xs-4 {
+        width:33.33%;
+    }
+    .col-xs-3 {
+        width:24.99%;
+    }
+    .col-xs-2 {
+        width:16.66%;
+    }
+    .header {
+        padding:40px 20px;
+        &__logo {
+            height:auto;
+            width:50%;
+            &--small {
+                height:25px;
+                width:auto;
+            }
+            &--xshidden {
+                display:none;
+            }
+        }
+        &--left {
+            right:20px;
+        }
+    }
+    .ski {
+        &__icon__wrap {
+            display:flex;
+            justify-content:space-evenly;
+        }
+        padding:20px 20px;
+        &__icon {
+            padding:10px 30px;
+        }
+    }
+    .slideshow {
+        height:400px;
+        &__title, &__button {
+            margin:20px;
+        }
+        &__pips {
+            right:20px;
+            bottom:30px;
+        }
+    }
+    .news {
+        &__content {
+            padding:30px 10px 100px 20px;
+        }
+        &__ill {
+            padding-top:200px;
+            &__img {
+                width:auto;
+                height:100px;
+                top:50px;
+                right:15%;
+            }
+        }
+    }
+    .product, .article, .footer {
+        padding:50px 20px;
+    }
+    .article {
+        background-size:cover;
+    }
+}
+//for de med knøttsmå telefoner
+@media screen and (max-width:400px) {
+    .header {
+        &__logo {
+            height:30px;
+            width:auto;
+            &--small {
+                height:17px;
+            }
+        }
+
+    }
+}
