@@ -33,6 +33,13 @@
         width:100%;
     }
 }
+@media screen and (max-width:750px) {
+    .header {
+        &__logo--xshidden {
+            display:none;
+        }
+    }
+}
 //TABLET
 @media screen and (max-width:992px) {
     .col-md-12 {
@@ -121,7 +128,7 @@
             height:auto;
             width:50%;
             &--small {
-                height:25px;
+                height:20px;
                 width:auto;
             }
             &--xshidden {
@@ -182,6 +189,9 @@
             &--small {
                 height:17px;
             }
+        }
+        &--left {
+            top:50px;
         }
     }
     .ski {

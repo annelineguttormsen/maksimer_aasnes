@@ -39,10 +39,10 @@ $formInput.on("blur", hideSearchBar);
 function addSearchBar() {
 	//fjern eventlistener fra søkeikonet
 	$searchIcon.off();
-	$form.css("display","inline-block");
+	$form.addClass("header__form--visible");
 	let timeout = setTimeout(
 		function(){
-			$formInput.css("width","200px")
+			$formInput.addClass("header__form--input--visible")
 		},10);
 	//setter fokus på input inni form elementet
 	$formInput.focus();
@@ -53,12 +53,12 @@ function hideSearchBar() {
 	//får spilt ut sin transition
 	let timeout = setTimeout(
 		function() {
-			$form.css("display","none");
+			$form.removeClass("header__form--visible");
 			//legg tilbake eventlistener på søkeikonet
 			$searchIcon.on("click", addSearchBar);
 		}, 200
 	);
-	$formInput.css("width","0px");
+	$formInput.removeClass("header__form--input--visible");
 }
 
 
