@@ -1,7 +1,7 @@
 //meny
 //variabler for dropdown meny
-$ddMenuBtn = $(".header__logo--menu");
-$ddMenu = $(".dd-menu ul");
+const $ddMenuBtn = $(".header__logo--menu");
+const $ddMenu = $(".dd-menu ul");
 
 //når hamburger ikonet trykkes skal dd meny poppe fram
 //sett fokus på dd meny
@@ -13,9 +13,9 @@ $ddMenuBtn.on("click",openMenu);
 $ddMenu.on("blur",closeMenu);
 
 function openMenu() {
+	$ddMenuBtn.off();
 	$ddMenu.addClass("dd-menu--open");
 	$ddMenu.focus();
-	$ddMenuBtn.off();
 }
 
 function closeMenu() {
@@ -25,9 +25,9 @@ function closeMenu() {
 
 //spoof søkefunksjon
 //variabler med elementer fra siden
-$searchIcon = $(".header__logo--search");
-$form = $(".header__form");
-$formInput = $(".header__form--input");
+const $searchIcon = $(".header__logo--search");
+const $form = $(".header__form");
+const $formInput = $(".header__form__input");
 
 //når søkeikonet trykkes, skal input field vises
 //input får fokus via addSearchBar, hvis fokus
@@ -42,7 +42,7 @@ function addSearchBar() {
 	$form.addClass("header__form--visible");
 	let timeout = setTimeout(
 		function(){
-			$formInput.addClass("header__form--input--visible")
+			$formInput.addClass("header__form__input--visible")
 		},10);
 	//setter fokus på input inni form elementet
 	$formInput.focus();
@@ -58,30 +58,34 @@ function hideSearchBar() {
 			$searchIcon.on("click", addSearchBar);
 		}, 200
 	);
-	$formInput.removeClass("header__form--input--visible");
+	$formInput.removeClass("header__form__input--visible");
 }
 
 
 //enkelt slideshow
 
-/*const images = 
-	["https://www.apple.com/newsroom/images/product/apps/lifestyle/Apple-Watch-records-ski-workouts-02282018_big.jpg.large.jpg",
-	"https://images.interactives.dk/kvinde-ski-MwwN38y8QHj49z0kfKo1FQ.jpg?auto=compress&ch=Width%2CDPR&dpr=2.63&ixjsv=2.2.4&q=38&rect=113%2C4%2C5534%2C3831&w=430",
-	"media/img/AI_image.jpg"];
-let imgPip = 0;
-const animation = setInterval(changeBackground,3000);
+//lagre slideshow elementene og pips som skal
+//vise hvor i slideshowet man er
+const $slideShowImgs = $(".slideshow__image");
+const $pips = $(".pip");
 
-function changeBackground() {
-	let n = imgPip%3;
-	imgPip++;
-	if (n == 2) {
-		$(".slideshow").css({"background":"url(" + images[n] + ")no-repeat center center","background-size":"auto 100%"});
+let slideShowInterval = setInterval(changeSlide,5000);
 
-	}else {
-		$(".slideshow").css({"background":"url(" + images[n] + ")no-repeat center center","background-size":"100%"});
+let slideIndex = 1;
+
+function changeSlide() {
+	if (slideIndex==3) {
+		slideIndex = 0;
+		$($slideShowImgs[1]).removeClass("slideshow__image--current");
+		$($slideShowImgs[2]).removeClass("slideshow__image--current");
+		$($pips[2]).removeClass("pip--current");
 	}
-	console.log("bakgrunnsbildet er nå " + images[n]);
-}*/
+	$($pips[slideIndex-1]).removeClass("pip--current");
+	$($pips[slideIndex]).addClass("pip--current");
+	$($slideShowImgs[slideIndex]).addClass("slideshow__image--current");
+	slideIndex++;
+}
+
 /*
 |￣￣￣￣￣ | 
 |   BLESS  | 

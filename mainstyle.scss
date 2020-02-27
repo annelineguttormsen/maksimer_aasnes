@@ -68,10 +68,10 @@ button {
 		&--visible {
 			display:inline-block!important;
 		}
-		&--input--visible {
+		&__input--visible {
 			width:200px!important;
 		}
-		&--input {
+		&__input {
 			outline:none;
 			transition:width .2s linear;
 			font-size:$pxl;
@@ -85,19 +85,19 @@ button {
 }
 .dd-menu {
 	position:relative;
+	display:block;
 	&--open {
-		margin-top:0px!important;
+		bottom:auto!important;
 	}
 	ul {
 		position:absolute;
-		display:block;
 		width:100%;
 		box-sizing:border-box;
-		margin-top:-100%;
+		bottom:10px;
 		list-style-type:none;
 		text-align:right;
 		padding:20px 50px;
-		transition:all .6s linear;
+		transition:all .2s linear;
 		background:$blue;
 		line-height:2;
 		z-index:3;
@@ -119,9 +119,28 @@ button {
 }
 .slideshow {
 	height:600px;
-	background: url("../media/img/AI_Image.jpg")no-repeat center;
-  	background-size:auto 100%;
   	position:relative;
+  	&__image {
+  		position:absolute;
+  		height:100%;
+  		width:100%;
+  		transition:all .5s linear;
+  		&--one {
+  			background: url("../media/img/AI_Image.jpg")no-repeat center;
+  			background-size:auto 100%;
+  		}
+  		&--two, &--three {
+  			right:-100%;
+  			background:lightblue;
+  		}
+  		&--three {
+  			right:-100%;
+  			background:tomato;
+  		}
+  		&--current {
+  			right:0px;
+  		}
+  	}
   	&__title {
   		position:absolute;
   		margin:50px;
@@ -139,6 +158,7 @@ button {
   		bottom:50px;
   		.pip {
   			display:inline-block;
+  			transition:background .2s linear;
   			width:10px;
   			height:10px;
   			border:2px solid white;
