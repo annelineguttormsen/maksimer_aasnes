@@ -1,26 +1,36 @@
 //meny
 //variabler for dropdown meny
 const $ddMenuBtn = $(".header__logo--menu");
-const $ddMenu = $(".dd-menu ul");
+const $ddMenu = $(".dd-menu");
 
 //når hamburger ikonet trykkes skal dd meny poppe fram
 //sett fokus på dd meny
 //fjern eventlistener på hamburger ikon
-$ddMenuBtn.on("click",openMenu);
+$ddMenuBtn.on("mouseup",openMenu);
 
 //skjul dd meny når fokuset fjernes
 //legg tilbake event listener på hamburger ikon
-$ddMenu.on("blur",closeMenu);
+$ddMenu.on("blur",blurCloseMenu);
 
 function openMenu() {
-	$ddMenuBtn.off();
-	$ddMenu.addClass("dd-menu--open");
-	$ddMenu.focus();
+	if($ddMenu.hasClass("dd-menu--open")) {
+		closeMenu();
+		console.log("meny er allerede åpen");
+	} else {
+		$ddMenu.addClass("dd-menu--open");
+		console.log("meny er ikke åpen");
+		$ddMenu.focus();
+	}
 }
 
 function closeMenu() {
 	$ddMenu.removeClass("dd-menu--open");
-	$ddMenuBtn.on("click",openMenu);
+	console.log("closeMenu tilkalt");
+}
+
+function blurCloseMenu() {
+	$ddMenu.removeClass("dd-menu--open");
+	console.log("closeMenu tilkalt");
 }
 
 //spoof søkefunksjon
@@ -69,9 +79,12 @@ function hideSearchBar() {
 const $slideShowImgs = $(".slideshow__image");
 const $pips = $(".pip");
 
-let slideShowInterval = setInterval(changeSlide,5000);
-
 let slideIndex = 1;
+
+//sett opp interval for å endre slideshow bilde
+let slideShowInterval = setInterval(function() {
+	changeSlide()
+},5000);
 
 function changeSlide() {
 	if (slideIndex==3) {
@@ -85,13 +98,3 @@ function changeSlide() {
 	$($slideShowImgs[slideIndex]).addClass("slideshow__image--current");
 	slideIndex++;
 }
-
-/*
-|￣￣￣￣￣ | 
-|   BLESS  | 
-|   THIS   | 
-|   MESS   |
-| ＿＿＿＿＿| 
-(\__/) || 
-(•ㅅ•) || 
-/ 　 づ*/

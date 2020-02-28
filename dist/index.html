@@ -14,21 +14,27 @@
 		<div class="header">
 			<img class="header__logo header__logo--main" src="media/icons/logo.svg">
 			<div class="header--left">
-				<img class="header__logo header__logo--small header__logo--xshidden" src="media/icons/eng.svg">
+				<img class="header__logo header__logo--small header__logo--tblhidden" src="media/icons/eng.svg">
 				<form class="header__form">
 					<input class="header__form__input" type="text" placeholder="Søk">
 				</form>
-				<img class="header__logo header__logo--small header__logo--search header__logo--xshidden" src="media/icons/søk.svg">
+				<img class="header__logo header__logo--small header__logo--search header__logo--tblhidden" src="media/icons/søk.svg">
 				<img class="header__logo header__logo--small header__logo--menu" src="media/icons/meny.svg">
 			</div>
-		</div>
-		<div class="col-12 dd-menu">
-			<ul tabindex="0">
-				<li class="dd-menu__main"><a href="#">Forside</a></li>
-				<li class="dd-menu__main"><a href="#">Ski</a></li>
-				<li class="dd-menu__main"><a href="#">Aktuelt</a></li>
-				<li class="dd-menu__main"><a href="#">Om Åsnes</a></li>
-			</ul>
+			<div class="col-12 dd-menu" tabindex="0">
+				<ul>
+					<li class="dd-menu__link dd-menu__link--tblvisible">
+						<form>
+							<input class="dd-menu__input" type="text" placeholder="Søk">
+						</form>
+					</li>
+					<li class="dd-menu__link dd-menu__link--tblvisible"><img class="dd-menu--eng" src="media/icons/eng-white.svg"></li>
+					<li class="dd-menu__link"><a href="#">Forside</a></li>
+					<li class="dd-menu__link"><a href="#">Ski</a></li>
+					<li class="dd-menu__link"><a href="#">Aktuelt</a></li>
+					<li class="dd-menu__link"><a href="#">Om Åsnes</a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="col-12 slideshow">
 			<div class="slideshow__image slideshow__image--one"></div>
