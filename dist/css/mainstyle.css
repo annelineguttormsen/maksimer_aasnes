@@ -157,6 +157,9 @@ button {
   font-family: "Josefin Sans", Arial, sans-serif;
   font-weight: 700;
 }
+.dd-menu__link--tblvisible {
+  display: none;
+}
 .dd-menu a {
   display: block;
   text-decoration: none;
@@ -455,6 +458,10 @@ button {
 @media screen and (max-width: 750px) {
   .header__logo--tblhidden {
     display: none;
+  }
+
+  .dd-menu__link--tblvisible {
+    display: block;
   }
 }
 @media screen and (max-width: 992px) {

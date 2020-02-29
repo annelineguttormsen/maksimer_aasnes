@@ -107,6 +107,9 @@ button {
 		font-size:$h3xl;
 		font-family:$sans-serif;
 		font-weight:700;
+		&--tblvisible {
+			display:none;
+		}
 	}
 	a {
 		display:block;
