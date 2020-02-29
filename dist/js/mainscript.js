@@ -76,7 +76,6 @@ function hideSearchBar() {
 	$formInput.removeClass("header__form__input--visible");
 }
 
-
 //enkelt slideshow
 
 //lagre slideshow elementene og pips som skal
