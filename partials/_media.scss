@@ -39,6 +39,9 @@
             display:none;
         }
     }
+    .dd-menu__link--tblvisible {
+        display:block;
+    }
 }
 //TABLET
 @media screen and (max-width:992px) {

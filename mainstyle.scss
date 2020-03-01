@@ -86,7 +86,6 @@ button {
 .dd-menu {
 	position:absolute;
 	left:0;
-
 	width:100%;
 	display:none;
 	&--open {
@@ -107,6 +106,9 @@ button {
 		font-size:$h3xl;
 		font-family:$sans-serif;
 		font-weight:700;
+		&--tblvisible {
+			display:none;
+		}
 	}
 	a {
 		display:block;
@@ -358,4 +360,5 @@ button {
 		font-size:$pxs;
 	}
 }
+//importerer _media til slutt for å ikke overskrive andre verdier
 @import "partials/media";
