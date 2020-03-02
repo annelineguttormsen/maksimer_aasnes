@@ -459,6 +459,9 @@ button {
   .header__logo--tblhidden {
     display: none;
   }
+  .header__form__input {
+    margin-left: 10px;
+  }
 
   .dd-menu__link--tblvisible {
     display: block;
@@ -567,8 +570,8 @@ button {
     padding: 40px 20px;
   }
   .header__logo {
-    height: auto;
-    width: 50%;
+    height: 40px;
+    width: auto;
   }
   .header__logo--small {
     height: 20px;
@@ -579,6 +582,14 @@ button {
   }
   .header--left {
     right: 20px;
+  }
+  .header__form__input {
+    height: 20px;
+    font-size: 14px;
+    box-shadow: -10px 0px 0px white;
+  }
+  .header__form__input--visible {
+    width: 50%;
   }
 
   .ski {

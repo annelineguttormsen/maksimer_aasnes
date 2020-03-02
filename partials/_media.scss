@@ -38,6 +38,9 @@
         &__logo--tblhidden {
             display:none;
         }
+        &__form__input {
+            margin-left:10px;
+        }
     }
     .dd-menu__link--tblvisible {
         display:block;
@@ -128,8 +131,8 @@
     .header {
         padding:40px 20px;
         &__logo {
-            height:auto;
-            width:50%;
+            height:40px;
+            width:auto;
             &--small {
                 height:20px;
                 width:auto;
@@ -141,6 +144,15 @@
         &--left {
             right:20px;
         }
+        &__form__input {
+            height:20px;
+            font-size:$pxs;
+            box-shadow:-10px 0px 0px white;
+            &--visible {
+                width:50%;
+            }
+        }
+        //kommentar så sass watch faktisk tar med denne delen ååååå
     }
     .ski {
         &__icon__wrap {
