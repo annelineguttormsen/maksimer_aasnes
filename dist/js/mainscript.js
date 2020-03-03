@@ -89,6 +89,7 @@ let slideIndex = 1;
 let slideShowInterval = setInterval(function() {
 	changeSlide(slideIndex)
 },5000);
+let slideShowTimeout;
 
 function changeSlide(i) {
 	slideIndex = i;
@@ -105,9 +106,10 @@ function changeSlide(i) {
 function pipChangeSlide(i) {
 	//stopp interval som endrer slide
 	clearInterval(slideShowInterval);
+	clearTimeout(slideShowTimeout);
 	changeSlide(i);
 	//vent litt før interval startes på nytt
-	setTimeout(function() {
+	slideShowTimeout = setTimeout(function() {
 		slideShowInterval = setInterval(function() {
 			changeSlide(slideIndex)
 		},5000);
