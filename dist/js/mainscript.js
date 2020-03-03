@@ -100,12 +100,4 @@ function changeSlide(i) {
 	$($slideShowImgs[slideIndex]).addClass("slideshow__image--current");
 	//bruk modulo for å resette slideIndex til 0 om det går over slides length
 	slideIndex = ++slideIndex % $slideShowImgs.length;
-	console.log(slideIndex);
 }
-	// remove current class from slides
-	// remove current class from pips
-
-	// Find current slide and pip
-		// add current classes
-
-	// increment slide index
