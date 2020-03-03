@@ -87,18 +87,25 @@ let slideIndex = 1;
 
 //sett opp interval for å endre slideshow bilde
 let slideShowInterval = setInterval(function() {
-	changeSlide()
+	changeSlide(slideIndex)
 },5000);
 
-function changeSlide() {
-	if (slideIndex==3) {
-		slideIndex = 0;
-		$($slideShowImgs[1]).removeClass("slideshow__image--current");
-		$($slideShowImgs[2]).removeClass("slideshow__image--current");
-		$($pips[2]).removeClass("pip--current");
-	}
-	$($pips[slideIndex-1]).removeClass("pip--current");
+function changeSlide(i) {
+	slideIndex = i;
+	//fjern klasser fra pips og slides
+	$slideShowImgs.removeClass("slideshow__image--current");
+	$pips.removeClass("pip--current");
+	//legg til klasse på riktig pip og slide
 	$($pips[slideIndex]).addClass("pip--current");
 	$($slideShowImgs[slideIndex]).addClass("slideshow__image--current");
-	slideIndex++;
+	//bruk modulo for å resette slideIndex til 0 om det går over slides length
+	slideIndex = ++slideIndex % $slideShowImgs.length;
+	console.log(slideIndex);
 }
+	// remove current class from slides
+	// remove current class from pips
+
+	// Find current slide and pip
+		// add current classes
+
+	// increment slide index

@@ -222,6 +222,7 @@ button {
   bottom: 50px;
 }
 .slideshow__pips .pip {
+  cursor: pointer;
   display: inline-block;
   transition: background 0.2s linear;
   width: 10px;
