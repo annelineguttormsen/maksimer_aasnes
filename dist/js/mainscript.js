@@ -101,3 +101,15 @@ function changeSlide(i) {
 	//bruk modulo for å resette slideIndex til 0 om det går over slides length
 	slideIndex = ++slideIndex % $slideShowImgs.length;
 }
+
+function pipChangeSlide(i) {
+	//stopp interval som endrer slide
+	clearInterval(slideShowInterval);
+	changeSlide(i);
+	//vent litt før interval startes på nytt
+	setTimeout(function() {
+		slideShowInterval = setInterval(function() {
+			changeSlide(slideIndex)
+		},5000);
+	},3000);
+}

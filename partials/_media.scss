@@ -78,6 +78,11 @@
     .col-md-2 {
         width:16.66%;
     }
+    .header {
+        &__form__input {
+            box-shadow:-10px 0px 0px white;
+        }
+    }
     .ski {
         &__icon__wrap {
             flex-wrap:wrap;

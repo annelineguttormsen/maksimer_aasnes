@@ -509,6 +509,10 @@ button {
     width: 16.66%;
   }
 
+  .header__form__input {
+    box-shadow: -10px 0px 0px white;
+  }
+
   .ski__icon__wrap {
     flex-wrap: wrap;
   }
